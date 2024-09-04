@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Online Gas Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Online Gas Booking</h1>
+    </header>
+
+    <div class="form-container">
+        <h2>Registration</h2>
+        <form id="registerForm" action="http://localhost:5000/submit" method="post">
+
+            <label for="username">Username<span>*</span>:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="mobile">Mobile Number<span>*</span>:</label>
+            <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number">
+
+            <label for="provider">Gas Provider<span>*</span>:</label>
+            <select id="provider" name="provider" required>
+                <option value="" disabled selected>Select your provider</option>
+                <option value="HP">HP</option>
+                <option value="IndianOil">Indian Oil</option>
+                <option value="BharatGas">Bharat Gas</option>
+            </select>
+
+            <fieldset>
+                <legend>Booking For:</legend>
+                <label>
+                    <input type="radio" name="bookingFor" value="self" required>
+                    Book for self
+                </label>
+                <label>
+                    <input type="radio" name="bookingFor" value="others" required>
+                    Book for others
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Choose Option :</legend>
+                <label>
+                    <input type="radio" name="contactOption" value="mobile" required>
+                    Mobile Number
+                </label>
+                <label>
+                    <input type="radio" name="contactOption" value="consumer" required>
+                    Consumer Number
+                </label>
+                <label>
+                    <input type="radio" name="contactOption" value="lpgId" required>
+                    LPG ID
+                </label>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

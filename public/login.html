@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Online Gas Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Online Gas Booking</h1>
+    </header>
+
+    <div class="form-container">
+        <h2>Login</h2>
+        <form id="loginForm" action="/submit" method="post">
+            <label for="username">Username<span>*</span> :</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password<span>*</span>:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Online Gas Booking. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
